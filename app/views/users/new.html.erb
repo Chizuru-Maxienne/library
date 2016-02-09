@@ -3,20 +3,18 @@
     <h2>Sign Up</h2>
   </div>
   <div class="panel-body">
-    <%= form_for(:user, url:'users/register') do |f| %>
+    <%= form_for(:user, url:register_users_path) do |f| %>
         <% if @user.errors.any? %>
             <div class="alert alert-danger">
-              <button class="glyphicon glyphicon-alert" role="button" data-dismiss="alert"
-                      aria-expanded="false">&times;</button>
-              <h3 class="h3">
-                <%= pluralize(@user.errors.count, "errors")%>
-                &nbsp; has prevented your registration.
-              </h3>
+              <a class="close" aria-label="close"
+                 data-dismiss="alert">&times;</a>
+              <strong>
+                <%= pluralize(@user.errors.count,"error")%>
+                &nbsp; has prevented your registration:
+              </strong>
               <ul>
-                <%= @user.errors.messages do |message| %>
-                    <li>
-                      <%= message %>
-                    </li>
+                <%= @user.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
                 <% end %>
               </ul>
             </div>
@@ -31,11 +29,7 @@
         </div>
         <div class="form-group-md-5">
           <%= f.label :'Confirm Password' %>
-          <%= f.text_field :confirm_password, {'class'=>'form-control'} %>
-        </div>
-        <div class="form-group-md-5">
-          <%= f.label :'Email' %>
-          <%= f.text_field :email, {'class'=>'form-control'} %>
+          <%= f.text_field :password_confirmation, {'class'=>'form-control'} %>
         </div>
         <span class="dl-horizontal"></span>
         <div class="form-group-md-5">

@@ -11,9 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160203220925) do
+ActiveRecord::Schema.define(version: 20160209184602) do
 
   create_table "add_password_digest_to_users", force: :cascade do |t|
+  end
+
+  create_table "auths", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
