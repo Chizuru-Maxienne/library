@@ -38,7 +38,7 @@
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
-            <li role="separator"  class="divider"></li>
+            <li role="separator" class="divider"></li>
             <li><a href="#">One more separated link</a></li>
           </ul>
         </li>
@@ -49,8 +49,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             <%= logged_in? ? current_user.email : 'Account' %>
             <span class="caret"></span></a>
-          </li>
-          <ul class="dropdown-menu">
+         <ul class="dropdown-menu">
         <% if !logged_in? %>
             <li><a href="<%= new_users_path %>">Sign Up</a></li>
             <li><a href="<%= login_auths_path %>">Sign Up</a></li>
@@ -58,11 +57,12 @@
             <%= link_to "Log out", logout_auths_path, method: :post %>
         <% end %>
         <li role="separator" class="divider"></li>
-              </ul>
-          </ul>
+         </ul>
+        </li>
+      </ul>
     </div>
   </div>
-</nav>
+<</nav>
 
 <%= yield %>
 
