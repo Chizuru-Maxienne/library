@@ -3,7 +3,7 @@
     <h2>Sign Up</h2>
   </div>
   <div class="panel-body">
-    <%= form_for(:user, url:register_users_path) do |f| %>
+    <%= form_for(:user,url:register_users_path) do |f| %>
         <% if @user.errors.any? %>
             <div class="alert alert-danger">
               <a class="close" aria-label="close"
