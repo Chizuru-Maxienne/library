@@ -20,6 +20,6 @@ class UsersController < ApplicationController
   end
   private
   def user_params_register
-    params.require(:user).permit(:email,:password,:password_gonfirmation)
+    params.require(:user).permit(:email,:password,:password_confirmation)
   end
 end
