@@ -1,0 +1,46 @@
+<div class="modal-dialog col-md-offset-3">
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3 class="text-center">New Book</h3>
+    </div>
+    <%= form_for @book, remote:true, html: { style: "display:inline;" } do |f| %>
+    <div class="modal-body">
+      <ul class="errors"></ul>
+        <div class="form-group">
+          <%= f.label :isbn.capitalize %>
+          <%= f.text_field :isbn, class: "form-control" %>
+        </div>
+      <div class="form-group">
+        <%= f.label :title %>
+        <%= f.text_field :title, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :author %>
+        <%= f.text_field :author, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :category %>
+        <%= f.text_field :category, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :publisher %>
+        <%= f.text_field :publisher, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :copyright %>
+        <%= f.date_select :copyright, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :description %>
+        <%= f.text_area :description, class: "form-control" %>
+      </div>
+
+      <div class="modal-footer">
+        <% f.submit class: "btn btn-primary" %>
+        <button class="btn-btn-warning" data-dismiss="modal" aria-label="Close">Cancel</button>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="modal-dialog col-lg-5 col-md-offset-3">
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3 class="h3"><%= book_page_heading(yield(:heading)) %></h3>
+    </div>
+        <div class="modal-body">
+        <% if @books.present? %>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+            <tr class="text-center">
+              <th>ISBN</th>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Category</th>
+              <th>Publisher</th>
+              <th>Copyright Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            <%= @books.each do |book| %>
+              <tr>
+                <td><%= book.isbn %></td>
+                <td><%= book.title %></td>
+                <td><%= book.author %></td>
+                <td><%= book.category %></td>
+                <td><%= book.publisher %></td>
+                <td><%= book.copyright %></td>
+                <td><%= link_to "Edit", edit_book_path(book), remote:true, class: "btn btn-default" %></td>
+                </tr>
+                <% end %>
+            </tbody>
+          </table>
+        </div>
+          <%= will_paginate @books, renderer: BootstrapPagination::Rails %>
+        <% else %>
+          <h4 class="h4 col-sm-6 text-warning">No Books Found!</h4>
+        <% end %>
+</div>
+   <div class="modal-footer">
+        <button class="btn btn-warning" data-dismiss="modal">Exit</button>
+   </div>
+  </div>
+</div>
