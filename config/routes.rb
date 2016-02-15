@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resource :users do
     member do
       get 'new'
-      post 'login'
+      post 'register'
     end
   end
 
