@@ -1,6 +1,11 @@
 class AuthsController < ApplicationController
+  layout 'application'
   def login
-
+    if logged_in?
+      redirect_to root_path
+    else
+      render 'login'
+    end
   end
   def verify
     user = User.find_by(email: params[:user][:email].downcase)

@@ -59,13 +59,12 @@
             <li><a href="<%= new_users_path %>">Sign Up</a>
             <li><a href="<%= login_auths_path %>">Sign In</a></li>
         <% else %>
-            <%= link_to "Log out", logout_auths_path, method: :post %>
+            <%= link_to "Log out", logout_auths_path, method: :get %>
         <% end %>
         <li role="separator" class="divider"></li>
-        <!--<li><a href="#">Separated link</a></li>-->
         </ul>
-    </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+    </div>
+    </div>
 </nav>
 <!--******-->
 <%= yield %>

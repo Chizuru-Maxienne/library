@@ -1,8 +1,6 @@
-<div class="panel">
-  <div class="panel-heading">
-    <h2>Sign Up</h2>
-  </div>
-  <div class="panel-body">
+<div class="container col-md-offset">
+  <div class="row col-md-6">
+    <div class="legend"><legend>Sign Up*</legend></div>
     <%= form_for(:user, url:register_users_path) do |f| %>
         <% if @user.errors.any? %>
             <div class="alert alert-danger">
@@ -32,6 +30,7 @@
           <%= f.password_field :password_confirmation, {'class'=>'form-control'} %>
         </div>
         <span class="dl-horizontal"></span>
+        <br><br>
         <div class="form-group-md-5">
           <%= f.submit :register,{'class'=>'btn btn-lg btn-warning'} %>
         </div>

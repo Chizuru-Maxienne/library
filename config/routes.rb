@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     member do
       get 'login'
       post 'verify'
-      post 'logout'
+      get 'logout'
     end
   end
   get 'welcome/index'
