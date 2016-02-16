@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9955a620-f5d9-48e6-a1b8-9e0effe3676c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/costume.js" />
-      <change type="DELETED" beforePath="C:\Sites\library\public\assets\.sprockets-manifest-c745b5d2459cc19855de1e5c244df2c3.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\library\public\assets\application-a2dec553a2d76c85c174cd2b593a9e52224523aa2c9a1a0aa6d15dd155440797.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\library\public\assets\application-a2dec553a2d76c85c174cd2b593a9e52224523aa2c9a1a0aa6d15dd155440797.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\library\public\assets\application-be4ea7671582a6180207358375bfd7eea6fa2f772cbfa71b20b555e71d217e16.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\library\public\assets\application-be4ea7671582a6180207358375bfd7eea6fa2f772cbfa71b20b555e71d217e16.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\library\public\assets\bootstrap-theme.min-f68357a6c2123efcb048e04acd6354e1232c291a880a4d95a051537dfcb25960.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\library\public\assets\bootstrap-theme.min-f68357a6c2123efcb048e04acd6354e1232c291a880a4d95a051537dfcb25960.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\library\public\assets\bootstrap.min-2c354d7c0179bd35563b93633b23ac5fb07c67d531d40a75695bacbd0eadb799.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\library\public\assets\bootstrap.min-2c354d7c0179bd35563b93633b23ac5fb07c67d531d40a75695bacbd0eadb799.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\library\public\assets\bootstrap.min-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\library\public\assets\bootstrap.min-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\library\public\assets\jquery.min-9973772584f113d55d9de9e38305bede3c581ab45775c5ce1fc666aa5bf261a0.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\library\public\assets\jquery.min-9973772584f113d55d9de9e38305bede3c581ab45775c5ce1fc666aa5bf261a0.js.gz" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/assets.rb" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/books/index.js.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="library.iws" />
@@ -85,16 +69,6 @@
         </entry>
       </file>
       <file leaf-file-name="_new.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/books/_new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.5" vertical-offset="0" max-vertical-offset="243">
-              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_new.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/categories/_new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="621">
@@ -107,18 +81,28 @@
       <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-37.555557" vertical-offset="835" max-vertical-offset="2430">
-              <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+            <state vertical-scroll-proportion="-11.305555" vertical-offset="1726" max-vertical-offset="2430">
+              <caret line="79" column="37" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="assets.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/books/index.js.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.037656903" vertical-offset="0" max-vertical-offset="717">
+              <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="assets.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4302789" vertical-offset="0" max-vertical-offset="753">
-              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
+              <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -195,6 +179,7 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/costume.js" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/config/initializers/assets.rb" />
+        <option value="$PROJECT_DIR$/app/views/books/index.js.erb" />
       </list>
     </option>
   </component>
@@ -876,14 +861,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/users/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="565" max-vertical-offset="1377">
-          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
@@ -1253,18 +1230,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+    <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-37.555557" vertical-offset="835" max-vertical-offset="2430">
-          <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
+          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4302789" vertical-offset="0" max-vertical-offset="753">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        <state vertical-scroll-proportion="-11.305555" vertical-offset="1726" max-vertical-offset="2430">
+          <caret line="79" column="37" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/books/index.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.037656903" vertical-offset="0" max-vertical-offset="717">
+          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
           <folding />
         </state>
       </provider>
