@@ -10,6 +10,7 @@ class BooksController < ApplicationController
 
   def new
     @book=Book.new
+    @categories=BookType.all
   end
 
   def create

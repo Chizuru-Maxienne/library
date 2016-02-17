@@ -2,6 +2,12 @@
 <html>
 <head>
   <title>Library</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'bootstrap.min', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'bootstrap-theme.min', media: 'all', 'data-turbolinks-track' => true %>
+
+<title><%= full_title(yield(:title)) %></title>
+<%= csrf_meta_tags %>
 </head>
 <body>
 <!--Nav Bar -->
@@ -27,44 +33,40 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Books<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><%= link_to 'All Books',  remote:true, class: "model-books" %></li>
+            <li><%= link_to 'All Books', books_path,  url:'book_types/crate', remote:true, class: "model-books" %></li>
             <li role="separator" class="divider"></li>
             <% if logged_in? %>
             <li><a href="#">New Added Books</a></li>
-            <li role="separator"  class="divider"></li>
+            <li role="separator" class="divider"></li>
             <li><a href="#">Old Books</a></li>
                 <% if is_admin? %>
                     <li role="separator"  class="divider"></li>
-                    <li class="bg-warning"><% link_to 'Add Category', new_category_path, remote: true,class: "model-books" %></li>
+                    <li class="bg-warning"><% link_to 'Add Category', new_book_types_path , remote: true,class: "model-books" %></li>
                     <li role="separator"  class="divider"></li>
-                    <li class="bg-warning"><% link_to 'Add Books', new_book_path, remote: true,class: "model-books" %></li>
-                    <% end %>
+                    <li class="bg-warning"><% link_to 'Add Books', new_book_path , remote: true,class: "model-books" %></li>
                 <% end %>
+            <% end %>
             </ul>
         </li>
       </ul>
-      <!--<form class="navbar-form navbar-left" role="search">-->
-      <!--<div class="form-group">-->
-      <!--<input type="text" class="form-control" placeholder="Search">-->
-      <!--</div>-->
-      <!--button type="submit" class"btn btn-default">Submit</button>-->
-      <!--<form>-->
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Support</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            <%= logged_in? ? current_user.email : 'Account' %>
-            <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-        <% if !logged_in? %>
-            <li><a href="<%= new_users_path %>">Sign Up</a>
-            <li><a href="<%= login_auths_path %>">Sign In</a></li>
-        <% else %>
-            <%= link_to "Log out", logout_auths_path, method: :get %>
-        <% end %>
-        <li role="separator" class="divider"></li>
-        </ul>
-    </div>
+            <li><a href="#">Support</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <%= logged_in? ? current_user.email : 'Account' %>
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                    <% if !logged_in? %>
+                    <li><a href="<%= new_users_path %>">Sign Up</a>
+                    <li><a href="<%= login_auths_path %>">Sign In</a></li>
+                    <% else %>
+                    <%= link_to "Log out", logout_auths_path, method: :get %>
+                    <% end %>
+                    <li role="separator" class="divider"></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
 <!--******-->
@@ -72,13 +74,10 @@
 <div id="library-modal" class="modal fade" role="dialog" tabindex="-1" style="...">
 
 </div>
-<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-<%= stylesheet_link_tag    'bootstrap.min', media: 'all', 'data-turbolinks-track' => true %>
 <%= javascript_include_tag    'bootstrap.min', 'data-turbolinks-track' => true %>
-<%= stylesheet_link_tag    'bootstrap-theme.min', media: 'all', 'data-turbolinks-track' => true %>
 <%= javascript_include_tag    'jquery.min', 'data-turbolinks-track' => true %>
 <%= javascript_include_tag    'costume', 'data-turbolinks-track' => true %>
-<%= csrf_meta_tags %>
 </body>
 </html>
