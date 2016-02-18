@@ -4,7 +4,9 @@
 jQuery.noConflict();
 (function($){
     $(function() {
-        $("model-books").click(function() {
+
+        $(".model-books").click(function() {
+
             $("#library-modal").modal()
         });
     });

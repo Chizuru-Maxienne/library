@@ -1,4 +1,4 @@
-class BookType < ActiveRecord::Base
+class BookTypes < ActiveRecord::Base
   validates :category, presence: true,
                       uniqueness: true
 end

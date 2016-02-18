@@ -1,4 +1,20 @@
+
 Rails.application.routes.draw do
+
+  resources :books, param: :isbn do
+    member do
+      get 'edit'
+      patch 'update'
+    end
+  end
+
+  resource :book_types do
+    member do
+      get 'new'
+      post 'create'
+    end
+  end
+
   resource :auths  do
     member do
       get 'login'
@@ -15,12 +31,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resource :layouts do
-    member do
-      get 'view_books'
-      post 'search_books'
-    end
-  end
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

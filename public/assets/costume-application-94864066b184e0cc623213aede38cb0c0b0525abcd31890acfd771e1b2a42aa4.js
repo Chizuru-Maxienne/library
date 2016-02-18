@@ -6,6 +6,7 @@ jQuery.noConflict();
 (function($){
     $(function() {
         $("model-books").click(function() {
+            alert("hello")
             $("#library-modal").modal()
         });
     });

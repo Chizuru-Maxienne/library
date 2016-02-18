@@ -12,7 +12,7 @@
 <body>
 <!--Nav Bar -->
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse" style="z-index: 11400;">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -33,17 +33,18 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Books<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><%= link_to 'All Books', books_path,  url:'book_types/crate', remote:true, class: "model-books" %></li>
+            <li><%= link_to 'All Books', books_path %></li>
             <li role="separator" class="divider"></li>
             <% if logged_in? %>
             <li><a href="#">New Added Books</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">Old Books</a></li>
+
                 <% if is_admin? %>
-                    <li role="separator"  class="divider"></li>
-                    <li class="bg-warning"><% link_to 'Add Category', new_book_types_path , remote: true,class: "model-books" %></li>
-                    <li role="separator"  class="divider"></li>
-                    <li class="bg-warning"><% link_to 'Add Books', new_book_path , remote: true,class: "model-books" %></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="bg-warning"><%= link_to 'Add Category', new_book_types_path , remote: true,class: "model-books" %></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="bg-warning"><%= link_to 'Add Books', new_book_path , remote: true,class: "model-books" %></li>
                 <% end %>
             <% end %>
             </ul>
@@ -71,13 +72,13 @@
 </nav>
 <!--******-->
 <%= yield %>
-<div id="library-modal" class="modal fade" role="dialog" tabindex="-1" style="...">
+<div id="library-modal" class="modal fade" role="dialog" tabindex="-1" style="margin-top: 10%; z-index: 1300">
 
 </div>
-
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-<%= javascript_include_tag    'bootstrap.min', 'data-turbolinks-track' => true %>
 <%= javascript_include_tag    'jquery.min', 'data-turbolinks-track' => true %>
-<%= javascript_include_tag    'costume', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag    'jquery_ujs', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag    'application', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag    'bootstrap.min', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag    'costume-application', 'data-turbolinks-track' => true %>
 </body>
 </html>
